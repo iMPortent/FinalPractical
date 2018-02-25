@@ -21,6 +21,8 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".BreedsActivity"/>
         <activity android:name=".DogsActivty"/>
+        <activity android:name=".PhotoActivity"/>
+
     </application>
 
 </manifest>

@@ -51,6 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         } else if(!noNameInPass(userInput, passInput)){
             Toast.makeText(this,"Password cannot contain username!", Toast.LENGTH_LONG).show();
         } else {
+            if(!MainActivity.preferences.contains(userInput)){
+                MainActivity.preferences.edit().putString(userInput,passInput).apply();
+            }
             Intent toBreeds = new Intent(this, BreedsActivity.class);
             startActivity(toBreeds);
         }

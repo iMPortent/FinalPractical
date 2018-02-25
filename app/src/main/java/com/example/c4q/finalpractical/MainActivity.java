@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences(sharedPrefKey, MODE_PRIVATE);
 
+        preferences.getAll();
         Intent toLogin = new Intent(this, LoginActivity.class);
         startActivity(toLogin);
 
