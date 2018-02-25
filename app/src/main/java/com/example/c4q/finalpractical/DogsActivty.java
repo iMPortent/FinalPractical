@@ -56,7 +56,7 @@ public class DogsActivty extends AppCompatActivity {
                 recyclerDogs.setAdapter(adapter);
             }
         };
-        RetrofitFactory.getInstance().setSpotifyNetworkListener(dogNetworkListener);
+        RetrofitFactory.getInstance().setDogNetworkListener(dogNetworkListener);
         RetrofitFactory.getInstance().getListDogs(breed);
     }
 

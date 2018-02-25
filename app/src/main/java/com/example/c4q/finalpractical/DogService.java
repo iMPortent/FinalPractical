@@ -11,4 +11,7 @@ import retrofit2.http.Path;
 public interface DogService {
     @GET("{breed}/images")
     Call<DogsModel>getDogs(@Path("breed") String breed);
+
+    @GET("{breed}/images/random")
+    Call<DogModel>getDog(@Path("breed") String breed);
 }

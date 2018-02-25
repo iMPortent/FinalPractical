@@ -18,6 +18,7 @@ public class RetrofitFactory {
     public static RetrofitFactory retrofitFactory;
     private  Retrofit retrofit;
     private DogNetworkListener dogNetworkListener;
+    private OneDogNetworkListener oneDogNetworkListener;
 
     public static RetrofitFactory getInstance(){
         if(retrofitFactory == null ) {
@@ -26,9 +27,15 @@ public class RetrofitFactory {
         return retrofitFactory;
     }
 
-    public void setSpotifyNetworkListener(DogNetworkListener dogyNetworkListener){
+    public void setDogNetworkListener(DogNetworkListener dogyNetworkListener){
         this.dogNetworkListener = dogyNetworkListener;
     }
+
+    public void setOneDogNetworkListener(OneDogNetworkListener oneDogNetworkListener){
+        this.oneDogNetworkListener = oneDogNetworkListener;
+    }
+
+
 
 
 
@@ -65,9 +72,35 @@ public class RetrofitFactory {
         });
     }
 
+    public void getDog(String breed){
+        DogService dogService = buildRetro().create(DogService.class);
+        Call<DogModel> getServiceResponse = dogService.getDog(breed);
+        getServiceResponse.enqueue(new Callback<DogModel>() {
+
+            @Override
+            public void onResponse(Call<DogModel> call, Response<DogModel> response) {
+                if(response.isSuccessful()){
+                    if(oneDogNetworkListener!=null){
+                        oneDogNetworkListener.singleDogCallback(response.body());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DogModel> call, Throwable t) {
+                Log.e("TAG","Failed");
+            }
+        });
+    }
+
 
 
     public interface DogNetworkListener {
         void doggieCallback(DogsModel response);
+    }
+
+    public interface OneDogNetworkListener {
+        void singleDogCallback(DogModel response);
+
     }
 }

@@ -10,6 +10,7 @@ public class DogsModel {
     String status;
     ArrayList<String> message;
 
+
     public ArrayList<String> getMessage(){
         return message;
     }

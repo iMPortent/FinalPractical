@@ -28,8 +28,10 @@
             android:padding="@dimen/cardview_pad"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/image_terrier"/>
 
     </android.support.v7.widget.CardView>
 
@@ -50,8 +52,10 @@
             android:padding="@dimen/cardview_pad"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/image_spaniel"/>
 
     </android.support.v7.widget.CardView>
 
@@ -73,8 +77,10 @@
             android:padding="@dimen/cardview_pad"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/image_retriever"/>
 
     </android.support.v7.widget.CardView>
 
@@ -95,8 +101,10 @@
             android:padding="@dimen/cardview_pad"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_gravity="end"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/image_poodle"/>
 
     </android.support.v7.widget.CardView>
 

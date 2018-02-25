@@ -5,5 +5,5 @@
     <string name="breed2">Spaniel</string>
     <string name="breed3">Retriever</string>
     <string name="breed4">Poodle</string>
-    <string name="greeting">Welcome!</string>
+    <string name="greeting">Welcome %1$s !</string>
 </resources>
