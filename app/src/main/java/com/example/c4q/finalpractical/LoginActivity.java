@@ -14,7 +14,7 @@ import android.widget.Toast;
  * Created by c4q on 2/25/18.
  */
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends MyActivities {
 
     private EditText fieldUsername, fieldPassword;
     private Button buttonSubmit;
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this,"Password cannot contain username!", Toast.LENGTH_LONG).show();
         } else {
             if(!MainActivity.preferences.contains("username")){
-                MainActivity.preferences.edit().putString("username",userInput).apply();
+                MainActivity.preferences.edit().putString("username",userInput).commit();
             }
             Intent toBreeds = new Intent(this, BreedsActivity.class);
             toBreeds.putExtra("login",userInput);

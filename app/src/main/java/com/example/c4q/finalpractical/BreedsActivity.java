@@ -20,7 +20,7 @@ import java.util.HashMap;
  * Created by c4q on 2/25/18.
  */
 
-public class BreedsActivity extends AppCompatActivity {
+public class BreedsActivity extends MyActivities {
 
     TextView greeting;
     ImageView terrier, poodle, retriever, spaniel;

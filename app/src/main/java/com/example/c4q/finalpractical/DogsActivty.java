@@ -23,7 +23,7 @@ import okhttp3.Response;
  * Created by c4q on 2/25/18.
  */
 
-public class DogsActivty extends AppCompatActivity {
+public class DogsActivty extends MyActivities {
 
     RetrofitFactory.DogNetworkListener dogNetworkListener;
 
