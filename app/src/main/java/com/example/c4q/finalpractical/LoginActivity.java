@@ -1,5 +1,6 @@
 package com.example.c4q.finalpractical;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -49,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Missing username or password",Toast.LENGTH_LONG).show();
         } else if(!noNameInPass(userInput, passInput)){
             Toast.makeText(this,"Password cannot contain username!", Toast.LENGTH_LONG).show();
+        } else {
+            Intent toBreeds = new Intent(this, BreedsActivity.class);
+            startActivity(toBreeds);
         }
     }
 
