@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FinalPractical</string>
+    <string name="submit">Submit</string>
+    <string name="breed1">Terrier</string>
+    <string name="breed2">Spaniel</string>
+    <string name="breed3">Retriever</string>
+    <string name="breed4">Poodle</string>
+    <string name="greeting">Welcome %1$s !</string>
 </resources>
